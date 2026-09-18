@@ -1,0 +1,7 @@
+interface:
+  display_name: "微信贴图号运营"
+  short_description: "从用户选方向到找对标、找图、成稿、发布准备与复盘"
+  default_prompt: "Use $wechat-sticker-operator to help me choose one WeChat image-post direction, then build and run the first test cycle."
+
+policy:
+  allow_implicit_invocation: true
