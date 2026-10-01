@@ -1,6 +1,6 @@
 ---
 name: wechat-sticker-operator
-description: "Operate a WeChat public-account image-post workflow from a human-chosen direction through benchmark research, lawful photo sourcing, drafting, review, publishing handoff, and data-based iteration. Use when a user wants to start, plan, produce, publish, or review a 微信公众号贴图号 or 图片消息 account."
+description: "Operate a WeChat public-account image-post workflow from a human-chosen direction through benchmark research, lawful photo sourcing, page planning, drafting, verified draft saving, review, publishing handoff, and data-based iteration. Use when a user wants to start, plan, produce, save drafts, publish, or review a 微信公众号贴图号 or 图片消息 account."
 ---
 
 # 微信贴图号运营
@@ -23,7 +23,7 @@ description: "Operate a WeChat public-account image-post workflow from a human-c
 - 未选方向：执行“方向选择”。
 - 已选方向、未建样本：执行“对标与首轮计划”。
 - 已有题目：执行“素材与成稿”。
-- 已有完整稿：执行“审阅与发布准备”。
+- 已有完整稿：执行“审阅、保存草稿与发布准备”，按用户授权动作选择分支。
 - 已发表：执行“数据记录与复盘”。
 
 读取 [workflow.md](references/workflow.md) 获取状态、目录和交付规范。
@@ -45,46 +45,49 @@ description: "Operate a WeChat public-account image-post workflow from a human-c
 2. 分开记录“只看到搜索摘要或截图”“打开单篇原文”“查看账号近期多篇”。
 3. 对每篇只拆：服务谁、什么场景、首图为什么能被认出、标题承诺什么、正文交付什么、互动动作是什么。
 4. 同时观察普通样本和表现较好的样本。发布时间和观察时长不同，不直接比较数字。
-5. 输出 7 至 14 个首轮题目，每个题目标明所需图片、事实依据和唯一主要测试变量。
+5. 按用户要求确定选题数量；未指定时建议 7 至 14 个。每个题目标明所需图片、事实依据和主要测试变量，用 [test-plan.md](assets/test-plan.md) 记录假设、比较条件和观察窗口。
 
 使用 [benchmark-record.md](assets/benchmark-record.md) 保存内部记录。完成足以制作第一篇的样本后停止无休止收集。
 
 ## 素材与成稿
 
-读取 [content-production.md](references/content-production.md) 和 [post-record.md](assets/post-record.md)。
+读取 [content-production.md](references/content-production.md)，用 [content-brief.md](assets/content-brief.md) 规划逐页信息和标题兑现，用 [post-record.md](assets/post-record.md) 保存成品与证据。
 
 1. 用“主体 + 场景 + 动作”找图片，优先用户自有、明确授权或适合目标用途的真实照片。
 2. 下载和打开最终文件，分别检查来源条件与画面质量。对标图只作研究，不自动成为发布素材。
-3. 先写一句任务：给谁、在什么场景、解决什么问题。标题、首图和正文必须兑现同一个承诺。
+3. 先写一句任务：给谁、在什么场景、解决什么问题。标题、首图和正文必须兑现同一个承诺；标题中的时间、金额、数量和亲历表述都要有依据。
 4. 一篇只解决一个具体问题。图片每增加一张，应增加一个步骤、选择、证据或细节。
 5. 核验做法、数据、健康信息和其他事实。照片不能证明拍摄者经历，也不能作为做法或效果依据。
 6. 交付标题、最终图片顺序、正文、内部来源记录、缺项和建议的下一步。
 
 如果用户选择实拍图，不用 AI 图片替代缺失素材。若用户允许 AI 图，明确它是示意或创作图，不能伪装成真实事件证据。
 
-## 审阅与发布准备
+## 审阅、保存草稿与发布准备
 
 读取 [publishing-and-review.md](references/publishing-and-review.md)。
 
 1. 在手机宽度预览标题、首图、段落、图片裁切和字号。
 2. 检查事实、素材使用条件、图文一致、标题兑现、无虚构经历、无误导身份。
-3. 保存可审阅草稿；展示具体标题、正文和图片，让使用者确认。
-4. 只有在使用者对这份具体成品和目标账号给出发表授权后，才使用可用浏览器或平台工具执行发表。
+3. 交付可审阅的本地成品。若用户要求保存到后台草稿箱，按授权完成保存，再返回列表并重新打开，核对标题、正文和图片逐篇保留。只存草稿的任务在此结束。
+4. 只有在使用者对这份具体成品和目标账号给出发表授权后，才使用可用浏览器或平台工具执行发表。同一份成品和动作已有明确授权时，不重复询问。
 5. 实名、扫码、协议确认等本人验证由使用者完成。
 6. 发表后回读后台或公开页。只有看到“已发表”或等价状态，才记录为发表；草稿、点击按钮或浏览器异常都不是完成证据。
+
+连接失败时记录原始错误与阶段，恢复后先查现有草稿再重试；工具明确拒绝网站访问时停止该站点操作，不换工具绕过。区分制作状态、已授权动作和后台状态，不用本地完成代替平台完成。
 
 ## 数据与复盘
 
 1. 保存真实发布时间、链接或平台内容 ID，以及平台显示的指标口径。
 2. 用一致观察窗口比较，例如发表满 24 小时初看、满 7 天补看。它只是比较约定，不是平台规律。
 3. 未取得的数据留空，不填 0。收入区分预估、已结算和已到账，并记录现金成本与制作时间。
-4. 每次复盘回答三件事：哪个反馈最好、最大问题是什么、下一篇只改哪个主要变量。
+4. 每次复盘回答三件事：哪个反馈最好、最大问题是什么、下一篇只改哪个主要变量。真实评论中的未解决问题可进入选题队列；没有评论时不编造反馈。
 5. 单篇结果只形成待验证判断；多次可比较结果支持同一判断后，才写成账号暂行经验。
 
 ## 完成标准
 
 - 方向完成：使用者明确选择了一个方向，并保存选择依据。
 - 单篇完成：标题、正文、最终图片、来源与使用条件、手机预览和缺项均可检查。
+- 草稿保存完成：后台列表出现对应条目，重新打开能核对标题、正文和图片，并逐篇保存内容标识或定位信息、回读时间与证据。
 - 发表完成：平台实际显示已发表，并保存时间和内容标识。
 - 复盘完成：真实指标、观察时间、口径和下一轮单变量调整已记录。
 - 收益成立：本号存在可核对的结算或到账记录，同时列出成本。阅读量、广告入口、课程案例和他人截图不算本号收入。
